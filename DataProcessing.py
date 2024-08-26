@@ -18,7 +18,6 @@ class DataProcessing:
         self.data["text"] = self.data["tokenized"].apply(lambda x: ' '.join(x))
         vector = vectorizer.transform(self.data['text'])
         self.data["frequency"] = list(vector.toarray())
-        print(self.data)
         pass
     
     def remove_stopWord(self, dataRow, stopWords):
