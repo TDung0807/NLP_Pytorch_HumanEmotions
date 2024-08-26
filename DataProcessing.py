@@ -1,6 +1,4 @@
 import pandas as pd
-import torch
-import torch.nn as nn
 import re
 from sklearn.feature_extraction.text import HashingVectorizer
 
@@ -29,8 +27,4 @@ class DataProcessing:
     def main(self,row):
         self.tokenizedWord(row)
         self.wordFrequency()
-        pass
-# Example usage
-df = pd.read_csv("./data/train.csv")
-dp = DataProcessing(df)
-dp.main('message')
+        return self.data
